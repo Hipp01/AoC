@@ -124,6 +124,4 @@ def co2():
 
 if __name__=="__main__":
     print(electrique())
-    print(oxygene())
-    print(co2())
     print(oxygene()*co2())
