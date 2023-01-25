@@ -62,9 +62,5 @@ def main():
     print(priorities_sum_group(group_of_three(lines)))
 
 
-
-        
-
-
 if __name__ == "__main__":
     main()
