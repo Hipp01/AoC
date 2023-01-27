@@ -21,7 +21,7 @@ def fully_contains(pair):
     else:
         return False
 
-def number_of_overlaps(lines):
+def number_of_overlaps_1(lines):
     overlaps = 0
     for i in lines :
         if fully_contains(i):
@@ -29,9 +29,25 @@ def number_of_overlaps(lines):
     return overlaps
 
 
+def overlaps(pair):
+    elf_1 = pair[0].split("-")
+    elf_2 = pair[1].split("-")
+    if max(int(elf_1[0]), int(elf_2[0])) <= min(int(elf_1[1]), int(elf_2[1])):
+        return True
+    else:
+        return False
+
+def number_of_overlaps_2(lines):
+    over = 0
+    for i in lines:
+        if overlaps(i):
+            over += 1
+    return over
+
 def main():
     lines = input()
-    print(number_of_overlaps(split_by_pair(lines)))
+    print(number_of_overlaps_1(split_by_pair(lines)))
+    print(number_of_overlaps_2(split_by_pair(lines)))
 
 
 if __name__ == "__main__":
