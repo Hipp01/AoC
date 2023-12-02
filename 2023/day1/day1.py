@@ -59,7 +59,7 @@ def calibration_letters(lines):
 
 def main():
     lines = input()
-    # print(calibration(lines))
+    print(calibration(lines))
     print(calibration_letters(lines))
 
 
