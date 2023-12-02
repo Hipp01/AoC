@@ -5,7 +5,6 @@ def input():
         lines = f.readlines()
     return lines
 
-
 def split_coord(lines):
     coord = []
     for i in lines:
@@ -39,7 +38,6 @@ def fill_grid_diagonal(grid, coord):
         y1 = int(i[1])
         x2 = int(i[2])
         y2 = int(i[3])
-        # np.fill_diagonal(a[min(x1, x2):max(x1, x2) + 1, min(y1, y2):max(y1, y2) + 1], a.diagonal() + 1)
         if x1 > x2 and y1 > y2:
             for j in range(x1 - x2 + 1):
                 a[x1 - j][y1 - j] += 1
@@ -77,4 +75,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # 17584 too low
