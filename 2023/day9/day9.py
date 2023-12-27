@@ -42,7 +42,7 @@ def extrapolate_backwards(lines):
 
 def main():
     lines = read_input()
-    # print(extrapolate(lines))
+    print(extrapolate(lines))
     print(extrapolate_backwards(lines))
 
 
